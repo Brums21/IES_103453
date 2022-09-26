@@ -6,6 +6,8 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import com.myweatherradar.app.IpmaCityForecast; //may need to adapt package name
 import com.myweatherradar.app.IpmaService;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 /**
  * demonstrates the use of the IPMA API for weather forecast
@@ -14,6 +16,7 @@ public class WeatherStarter {
 
     //todo: should generalize for a city passed as argument
     private static final int CITY_ID_AVEIRO = 1010500;
+    private static final Logger logger = LogManager.getLogger(WeatherStarter.class);
 
     public static void  main(String[] args ) {
 
@@ -23,6 +26,7 @@ public class WeatherStarter {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
+        logger.info("Got the API");
         // create a typed interface to use the remote API (a client)
         IpmaService service = retrofit.create(IpmaService.class);
         // prepare the call to remote endpoint
@@ -31,6 +35,8 @@ public class WeatherStarter {
         if (args.length != 0){
             temp_id = Integer.parseInt(args[0]);
         }
+
+        logger.info("Got the city");
 
         Call<IpmaCityForecast> callSync = service.getForecastForACity(temp_id);
 
@@ -45,12 +51,15 @@ public class WeatherStarter {
                         firstDay.getForecastDate(),
                         Double.parseDouble(firstDay.getTMax()),
                         Double.parseDouble(firstDay.getTMin()));
+                        logger.info("Info obtained");
             } else {
                 System.out.println( "No results for this request!");
+                logger.error("No results...");
             }
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+        logger.info("Finished");
 
     }
 }
