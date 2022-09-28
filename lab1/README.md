@@ -34,4 +34,8 @@ Foram adicionadas as dependencias necessarias, e, apos modificacao do programa c
 
 Codigo a executar na bash:
 
-$ mvn exec:java -Dexec.mainClass="com.myweatherradar.app.WeatherStarter" -Dexec.args=1010500
+```$ mvn exec:java -Dexec.mainClass="com.myweatherradar.app.WeatherStarter" -Dexec.args=1010500```
+
+## nota importante
+
+O portainer e o teste do docker Compose (mais especificamente, o projeto web), estao ambos a utilizar a mesma porta (8000) pelo que so pode estar ligado um de cada vez.
