@@ -1,0 +1,52 @@
+10-Oct-2022 22:12:15.446 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.67
+10-Oct-2022 22:12:15.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 23 2022 11:22:29 UTC
+10-Oct-2022 22:12:15.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.67.0
+10-Oct-2022 22:12:15.448 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Linux
+10-Oct-2022 22:12:15.449 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            5.15.0-48-generic
+10-Oct-2022 22:12:15.449 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+10-Oct-2022 22:12:15.449 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             /usr/lib/jvm/java-17-openjdk-amd64
+10-Oct-2022 22:12:15.449 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           17.0.4+8-Ubuntu-120.04
+10-Oct-2022 22:12:15.449 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Private Build
+10-Oct-2022 22:12:15.449 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /home/bruna/Desktop/IES_103453/lab2/apache-tomcat-9.0.67
+10-Oct-2022 22:12:15.449 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /home/bruna/Desktop/IES_103453/lab2/apache-tomcat-9.0.67
+10-Oct-2022 22:12:15.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+10-Oct-2022 22:12:15.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+10-Oct-2022 22:12:15.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+10-Oct-2022 22:12:15.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+10-Oct-2022 22:12:15.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+10-Oct-2022 22:12:15.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=/home/bruna/Desktop/IES_103453/lab2/apache-tomcat-9.0.67/conf/logging.properties
+10-Oct-2022 22:12:15.456 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+10-Oct-2022 22:12:15.457 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+10-Oct-2022 22:12:15.457 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+10-Oct-2022 22:12:15.457 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+10-Oct-2022 22:12:15.457 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+10-Oct-2022 22:12:15.457 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=/home/bruna/Desktop/IES_103453/lab2/apache-tomcat-9.0.67
+10-Oct-2022 22:12:15.457 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=/home/bruna/Desktop/IES_103453/lab2/apache-tomcat-9.0.67
+10-Oct-2022 22:12:15.458 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=/home/bruna/Desktop/IES_103453/lab2/apache-tomcat-9.0.67/temp
+10-Oct-2022 22:12:15.459 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+10-Oct-2022 22:12:15.735 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+10-Oct-2022 22:12:15.755 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [451] milliseconds
+10-Oct-2022 22:12:15.796 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+10-Oct-2022 22:12:15.796 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.67]
+10-Oct-2022 22:12:15.810 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/bruna/Desktop/IES_103453/lab2/apache-tomcat-9.0.67/webapps/example-1.0-SNAPSHOT.war]
+10-Oct-2022 22:12:16.038 INFO [main] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/bruna/Desktop/IES_103453/lab2/apache-tomcat-9.0.67/webapps/example-1.0-SNAPSHOT.war] has finished in [227] ms
+10-Oct-2022 22:12:16.039 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/bruna/Desktop/IES_103453/lab2/apache-tomcat-9.0.67/webapps/docs]
+10-Oct-2022 22:12:16.053 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/bruna/Desktop/IES_103453/lab2/apache-tomcat-9.0.67/webapps/docs] has finished in [13] ms
+10-Oct-2022 22:12:16.053 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/bruna/Desktop/IES_103453/lab2/apache-tomcat-9.0.67/webapps/ROOT]
+10-Oct-2022 22:12:16.068 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/bruna/Desktop/IES_103453/lab2/apache-tomcat-9.0.67/webapps/ROOT] has finished in [15] ms
+10-Oct-2022 22:12:16.068 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/bruna/Desktop/IES_103453/lab2/apache-tomcat-9.0.67/webapps/examples]
+10-Oct-2022 22:12:16.271 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/bruna/Desktop/IES_103453/lab2/apache-tomcat-9.0.67/webapps/examples] has finished in [203] ms
+10-Oct-2022 22:12:16.272 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/bruna/Desktop/IES_103453/lab2/apache-tomcat-9.0.67/webapps/manager]
+10-Oct-2022 22:12:16.291 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/bruna/Desktop/IES_103453/lab2/apache-tomcat-9.0.67/webapps/manager] has finished in [19] ms
+10-Oct-2022 22:12:16.291 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [/home/bruna/Desktop/IES_103453/lab2/apache-tomcat-9.0.67/webapps/host-manager]
+10-Oct-2022 22:12:16.313 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [/home/bruna/Desktop/IES_103453/lab2/apache-tomcat-9.0.67/webapps/host-manager] has finished in [22] ms
+10-Oct-2022 22:12:16.321 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+10-Oct-2022 22:12:16.357 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [601] milliseconds
+10-Oct-2022 22:16:58.318 INFO [http-nio-8080-exec-7] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/example-1.0-SNAPSHOT]
+10-Oct-2022 22:17:28.459 INFO [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/bruna/Desktop/IES_103453/lab2/apache-tomcat-9.0.67/webapps/example-1.0-SNAPSHOT.war]
+10-Oct-2022 22:17:28.479 INFO [http-nio-8080-exec-2] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/bruna/Desktop/IES_103453/lab2/apache-tomcat-9.0.67/webapps/example-1.0-SNAPSHOT.war] has finished in [20] ms
+10-Oct-2022 22:17:35.717 INFO [http-nio-8080-exec-9] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/example-1.0-SNAPSHOT] has started
+10-Oct-2022 22:17:35.738 INFO [http-nio-8080-exec-9] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/example-1.0-SNAPSHOT] is completed
+10-Oct-2022 22:58:53.549 INFO [http-nio-8080-exec-14] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/example-1.0-SNAPSHOT]
+10-Oct-2022 22:59:02.660 INFO [http-nio-8080-exec-16] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive [/home/bruna/Desktop/IES_103453/lab2/apache-tomcat-9.0.67/webapps/example-1.0-SNAPSHOT.war]
+10-Oct-2022 22:59:02.689 INFO [http-nio-8080-exec-16] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive [/home/bruna/Desktop/IES_103453/lab2/apache-tomcat-9.0.67/webapps/example-1.0-SNAPSHOT.war] has finished in [28] ms

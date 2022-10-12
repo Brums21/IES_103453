@@ -13,6 +13,4 @@
 <error line="8" severity="error" message="First sentence should end with a period." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocStyleCheck"/>
 <error line="21" column="32" severity="error" message="Variable &apos;data&apos; explicitly initialized to &apos;null&apos; (default value for its type)." source="com.puppycrawl.tools.checkstyle.checks.coding.ExplicitInitializationCheck"/>
 </file>
-<file name="/home/bruna/Desktop/IES_103453/lab1/lab_1.5/ipmapiclient/src/test/java/com/apiclient/AppTest.java">
-</file>
 </checkstyle>

@@ -42,7 +42,7 @@ O portainer e o teste do docker Compose (mais especificamente, o projeto web), e
 
 ## lab 1.5
 
-Para este guiao foram criados dois projetos maven, um com o ficheiro main do projeto do lab 1.2 e outro projeto separado com os restantes ficheiros da api que tratavam da parte logica. O projeto Maven com o ficheiro main tem groupID="mainproj" e artifactID="weatherforecast".
+Para este guiao foram criados dois projetProject → Properties → Target Runtimes → Apache Tomcaos maven, um com o ficheiro main do projeto do lab 1.2 e outro projeto separado com os restantes ficheiros da api que tratavam da parte logica. O projeto Maven com o ficheiro main tem groupID="mainproj" e artifactID="weatherforecast".
 
 Ja o outro projetot tem groupID="ipmapiclient" e artifactID="com.apiclient".
 
