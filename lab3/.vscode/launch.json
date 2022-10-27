@@ -1,0 +1,35 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Ex33Application",
+            "request": "launch",
+            "mainClass": "exerc.ex3_3.Ex33Application",
+            "projectName": "ex3_3"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ex32Application",
+            "request": "launch",
+            "mainClass": "app.ex3_2.Ex32Application",
+            "projectName": "ex3_2"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Attach)",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch ExAApplication",
+            "request": "launch",
+            "mainClass": "ex3_1a.demo.ExAApplication",
+            "projectName": "demo"
+        }
+    ]
+}
