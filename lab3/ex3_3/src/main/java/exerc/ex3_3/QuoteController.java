@@ -1,18 +1,13 @@
 package exerc.ex3_3;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
-
-import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -27,11 +22,7 @@ import exerc.ex3_3.Exceptions.ResourceNotFoundException;
 public class QuoteController {
 
     @Autowired
-    private QuoteRepository quoteRepository;
-
-    @Autowired
-    private ShowRepository showRepository;
-
+    private QuoteService quoteService;
 
     /* Mapeamento da api:
      *          "/shows" -> mostra todos os filmes com as quotes associadas
@@ -40,64 +31,56 @@ public class QuoteController {
      */
 
     @GetMapping("/shows")                       //list all movies
-    public List<Quote> getAllQuotes() {
-        return quoteRepository.findAll();       //funcional
+    public List<Quote> findAllQuotes() {
+        return quoteService.getQuotes();       //funcional
     }
 
-    @GetMapping("/quote")
-    public ResponseEntity<Quote> getQuotes(){
-        List<Quote> quotes = quoteRepository.findAll();
-        if (quotes.size() != 0){
-            Quote randquote = quotes.get((int)(Math.random() * quotes.size()));
-            return ResponseEntity.ok().body(randquote);
+    @GetMapping("/quote")                   //return a random quote
+    public Quote getQuotes(){
+        int arraysize = quoteService.getQuotes().size();
+        if (arraysize>0){
+            return quoteService.getQuotes().get((int)(Math.random() * arraysize));    
         }
-        return ResponseEntity.ok().body(null);
+        return null;
     }
 
-    
     @GetMapping("/quotes")              
-    public ResponseEntity<Quote> getAllQuotes(@RequestParam(value="show", required=false) String show_id) {
+    public Quote getQuote(@RequestParam(name = "show_id", required = false) Long show_id) throws ResourceNotFoundException {
         if (show_id == null){
-            return getQuotes();
+            return getQuotes();                 //ir buscar quote qualquer
         }
-        List<Quote> quotesShow = quoteRepository.findByShowId(Integer.parseInt(show_id));
-        if (quotesShow.size()<1){
-            return ResponseEntity.ok().body(null);
+        List<Quote> filteredQuotes = new ArrayList<Quote>();
+        for (Quote quote: quoteService.getQuotes()){
+            if (quote.getShow().getIdShow().equals(show_id)){
+                filteredQuotes.add(quote);
+            }
         }
-        return ResponseEntity.ok().body(quotesShow.get((int)(Math.random() * quotesShow.size())));   
+        if (filteredQuotes.isEmpty()){
+            return null;
+        }
+        return filteredQuotes.get((int)(Math.random() * filteredQuotes.size()));
     }
 
-    
     @PostMapping("/quotes")                 //put some quotes
-    public Quote createQuote() {
-        Show show = new Show("titulo do filme", 2002);
-        Quote quote = new Quote(showRepository.save(show), "Isto e uma quote qualquer");
-        return quoteRepository.save(quote);
+    public Quote createQuote(@RequestBody Quote quote) {
+        return quoteService.saveQuote(quote);
     }
 
-    /* 
-    @PutMapping("/employees/{id}")          //modify some quotes
-    public ResponseEntity<Employee> updateEmployee(@PathVariable(value = "id") Long employeeId,
-         @Valid @RequestBody Employee employeeDetails) throws ResourceNotFoundException {
-        Employee employee = employeeRepository.findById(employeeId)
-        .orElseThrow(() -> new ResourceNotFoundException("Employee not found for this id :: " + employeeId));
-
-        employee.setEmailId(employeeDetails.getEmailId());
-        employee.setLastName(employeeDetails.getLastName());
-        employee.setFirstName(employeeDetails.getFirstName());
-        final Employee updatedEmployee = employeeRepository.save(employee);
-        return ResponseEntity.ok(updatedEmployee);
-    }*/
+     
+    @PutMapping("/quotes/{id}")          //modify some quotes
+    public Quote updateQuote(@RequestBody Quote quote){
+        return quoteService.updateQuote(quote);
+    }
 
     
     @DeleteMapping("/quote/{id}")       //delete a movie
-    public Map<String, Boolean> deleteEmployee(@PathVariable(value = "id") Long quoteId)
-         throws ResourceNotFoundException {
-        Quote quote = quoteRepository.findById(quoteId)
-       .orElseThrow(() -> new ResourceNotFoundException("Employee not found for this id :: " + quoteId));
-        quoteRepository.delete(quote);
+    public Map<String, Boolean> deleteEmployee(@RequestParam (name = "quote_id", required = false) Long quote_id){
         Map<String, Boolean> response = new HashMap<>();
-        response.put("deleted", Boolean.TRUE);
+        if (quoteService.deleteQuote(quote_id)){    
+            response.put("deleted", Boolean.TRUE);
+            return response;
+        }
+        response.put("deleted", Boolean.FALSE);
         return response;
     }
 }

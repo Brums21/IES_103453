@@ -11,7 +11,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 @Entity
@@ -22,9 +24,10 @@ public class Quote {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //gerar ID automaticamente
     @Column(name = "quote_id")
-    private long id;
+    private Long id;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade=CascadeType.ALL)
+    @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "show_id")
     private Show show;
 
@@ -48,7 +51,7 @@ public class Quote {
         this.strQuote = strQuote;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 

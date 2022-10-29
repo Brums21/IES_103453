@@ -1,4 +1,8 @@
 colocar isto no readme
 
 p criar docker container com o mysql para base de dados persistente:
-$ docker run --name mysqldatabase -e MYSQL_ROOT_PASSWORD=admin -e MYSQL_DATABASE=app -e MYSQL_USER=admin -e MYSQL_PASSWORD=211002 -p 33061:3306 -d mysql/mysql-server:5.7
+docker run --name mysqldatabase -e 
+MYSQL_ROOT_PASSWORD=admin -e 
+MYSQL_DATABASE=app -e 
+MYSQL_USER=admin -e 
+MYSQL_PASSWORD=211002 -p 33061:3306 -d mysql/mysql-server:5.7
