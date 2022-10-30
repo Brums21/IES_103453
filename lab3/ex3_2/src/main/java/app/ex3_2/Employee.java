@@ -11,6 +11,8 @@ import javax.persistence.Table;
 @Table(name = "employees")
 public class Employee {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String firstName;
     private String lastName;
@@ -26,8 +28,6 @@ public class Employee {
          this.emailId = emailId;
     }
  
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
         public long getId() {
         return id;
     }
